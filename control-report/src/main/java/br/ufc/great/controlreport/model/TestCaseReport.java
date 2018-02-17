@@ -3,29 +3,35 @@ package br.ufc.great.controlreport.model;
 import java.util.ArrayList;
 
 /**
- * Created by Erick on 01/07/2017.
+ * Created by Erick Barros on 01/07/2017.
  */
 
 public class TestCaseReport {
-    private int id;
+    private int testId;
     private boolean isPassed;
     private String reason;
     private String contextState;
     private String expectedFeatures;
     private String actualFeatures;
-    // Expected features not activated.
     private String featuresDeactivated;
-    // Unexpected active features.
     private String unexpectedFeatures;
-    // Unvisited contexts during the adaptation.
     private String unvisitedContexts;
+    private String undefinedContexts;
     private ArrayList<String> warnings;
 
     public TestCaseReport() {
 
     }
+    
+    public String getUndefinedContexts() {
+		return undefinedContexts;
+	}
 
-    public String getReason() {
+	public void setUndefinedContexts(String undefinedContexts) {
+		this.undefinedContexts = undefinedContexts;
+	}
+
+	public String getReason() {
         return reason;
     }
 
@@ -93,12 +99,12 @@ public class TestCaseReport {
         this.warnings = warnings;
     }
 
-    public int getId() {
-        return id;
+    public int getTestId() {
+        return testId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setTestId(int id) {
+        this.testId = id;
     }
 
     public String getContextState() {
@@ -125,6 +131,13 @@ public class TestCaseReport {
 
     public boolean haveUnvisitedContexts() {
         if (unvisitedContexts.length() > 0) {
+            return true;
+        }
+        return false;
+    }
+    
+    public boolean haveUndefinedContexts() {
+        if (undefinedContexts.length() > 0) {
             return true;
         }
         return false;

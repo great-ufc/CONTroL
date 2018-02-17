@@ -23,14 +23,15 @@ import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Event;
 
+/**
+ * Created by Erick Barros on 01/07/2017.
+ */
+
 public class MainWindow {
 
 	protected Shell shlControlReport;
 	private Thread reportThread;
-	/**
-	 * Launch the application.
-	 * @param args
-	 */
+
 	public static void main(String[] args) {
 		try {
 			MainWindow window = new MainWindow();
@@ -40,9 +41,6 @@ public class MainWindow {
 		}
 	}
 
-	/**
-	 * Open the window.
-	 */
 	public void open() {
 		Display display = Display.getDefault();
 		createContents();
@@ -55,9 +53,6 @@ public class MainWindow {
 		}
 	}
 
-	/**
-	 * Create contents of the window.
-	 */
 	protected void createContents() {
 		shlControlReport = new Shell(SWT.CLOSE | SWT.TITLE | SWT.MIN);
 		shlControlReport.setSize(450, 300);
@@ -148,14 +143,9 @@ public class MainWindow {
                 			txtFdDestiny.getText());
                 	
                 	try {
-//                		ProgressWindow progressWindow = new ProgressWindow();
     					reportManager.readReportFromJson();
-//    					progressWindow.open();
-//    					reportManager.setProgressBar(progressWindow.getProgressBarComponent());
     					reportThread = new Thread(reportManager);
     					reportThread.start();
-//    					reportManager.setProgressBar(progressWindow.getProgressBarComponent());
-//    					progressWindow.open();
                     	
     				} catch (JsonParseException e) {
     					createWarningMessage("Error while reading Json file.", e.getMessage());

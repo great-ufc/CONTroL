@@ -39,6 +39,7 @@ import java.util.ArrayList;
 import javax.swing.JProgressBar;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.aventstack.extentreports.AnalysisStrategy;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
@@ -76,6 +77,7 @@ public class ReportManager implements Runnable {
 		htmlReporter.config().setDocumentTitle("CONTrol Report");
 		
 		extent = new ExtentReports();
+		extent.setAnalysisStrategy(AnalysisStrategy.SUITE);
         extent.attachReporter(htmlReporter);
 	}
 	
@@ -87,13 +89,12 @@ public class ReportManager implements Runnable {
 		for (TestSequenceReport testSeq : testSequences) {
 			extentSequence = extent.createTest("Test Sequence: " + testSeq.getId());
 			for (TestCaseReport testCase : testSeq.getTestCases()) {
-				extentCase = extentSequence.createNode("Test Case: " + testCase.getId());
+				extentCase = extentSequence.createNode("Test Case: " + testCase.getTestId());
 				
-				// Result
 				if (testCase.isPassed()) {
-					extentCase.pass(testCase.getReason());
+					extentCase.pass("Final Result: The expected features are equals to the actual activated features.");
 				} else {
-					extentCase.fail(testCase.getReason());
+					extentCase.fail("Final Result: "+testCase.getReason());
 				}
 				
 				extentCase.info("Context State: "+testCase.getContextState());
@@ -103,14 +104,17 @@ public class ReportManager implements Runnable {
 				if (testCase.haveFeaturesDeactivated()) {
 					extentCase.info("Deactivated Expected Features: "+testCase.getFeaturesDeactivated());
 				}
-				
-				// Warnings
+
 				if (testCase.haveUnexpectedFeatures()) {
 					extentCase.warning("Unexpected Activated Features: "+testCase.getUnexpectedFeatures());
 				}
 				
 				if (testCase.haveUnvisitedContexts()) {
 					extentCase.warning("Unvisited Contexts: "+testCase.getUnvisitedContexts());
+				}
+				
+				if (testCase.haveUndefinedContexts()) {
+					extentCase.warning("Undefined Contexts: "+testCase.getUndefinedContexts());
 				}
 				
 				if (testCase.haveWarnings()) {

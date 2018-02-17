@@ -3,6 +3,10 @@ package br.ufc.great.controlreport.view;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+/**
+ * Created by Erick Barros on 01/07/2017.
+ */
+
 public class FileChooser {
 	
 	private JFileChooser chooser;

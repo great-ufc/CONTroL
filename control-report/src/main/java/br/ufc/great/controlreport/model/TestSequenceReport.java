@@ -3,7 +3,7 @@ package br.ufc.great.controlreport.model;
 import java.util.ArrayList;
 
 /**
- * Created by Erick on 01/07/2017.
+ * Created by Erick Barros on 01/07/2017.
  */
 
 public class TestSequenceReport {
