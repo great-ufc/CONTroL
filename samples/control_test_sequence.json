@@ -1,0 +1,47 @@
+{
+   "testSequences":[
+      [
+         {
+            "testId":1,
+            "contextState":[
+               "battery:isBatteryMedium",
+			      "internet:hasInternetConnection"
+            ],
+            "expectedFeatureStatus":[
+               "login",
+               "video"
+            ],
+            "actualFeatureStatus":[
+				
+            ]
+         },
+         {
+            "testId":2,
+            "contextState":[
+               "isBatteryLow",
+			      "internet:hasInternetConnection"
+            ],
+            "expectedFeatureStatus":[
+				"login"
+            ],
+            "actualFeatureStatus":[
+               
+            ]
+         },
+         {
+            "testId":3,
+            "contextState":[
+               "battery:isBatteryHigh",
+               "internet:hasInternetConnection"
+            ],
+            "expectedFeatureStatus":[
+              "login",
+              "video"
+            ],
+            "actualFeatureStatus":[
+               
+            ]
+         }
+      ]
+   ]
+}

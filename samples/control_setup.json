@@ -1,0 +1,25 @@
+{
+	"testSequencePath":"/control/control_test_sequence.json",
+	
+	"testReportPath":"/control/control_report.json",
+	
+	"timeoutPeriod":10,
+	
+	"featuresAvaliable":["login", "video"],
+
+	"contextDomain":{
+		"keyValues":{
+			"internet":{
+				"hasInternetConnection":"true",
+				"hasNotInternetConnection":"false"	
+			}
+		},
+		"keyValuesList":{
+			"battery":{
+				"isBatteryLow":["0.0", "0.10", "0.20"],
+				"isBatteryMedium":["0.30", "0.40", "0.50", "0.60", "0.70"],
+				"isBatteryHigh":["0.80", "0.90", "1.00"]	
+			}
+		}
+	}
+} 
