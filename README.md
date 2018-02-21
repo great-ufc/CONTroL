@@ -19,7 +19,7 @@ CONTroL, which stands for CONtext-variability-based software Testing Library, is
 
 See the paper about CONTroL for further reference. Link:
 
-## Authors
+## Developers
 * Ismayle de Sousa Santos
 * Erick Barros dos Santos
 
