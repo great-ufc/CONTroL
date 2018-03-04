@@ -1,3 +1,13 @@
+/*
+* File: TestCase.java 
+* Created: 2017-07-01
+* Authors: Ismayle Santos, Erick Barros, Pedro Alcântara
+*   - Ismayle de Sousa Santos
+*   - Erick Barros dos Santos
+*   - Rossana Maria de Castro Andrade
+*   - Pedro de Alcântara dos Santos Neto
+*/
+
 package great.ufc.br.control.models;
 
 import java.util.ArrayList;
