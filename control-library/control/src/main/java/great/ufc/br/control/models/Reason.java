@@ -1,6 +1,6 @@
 /*
 * File: Reason.java 
-* Created: 2017-08-31
+* Created: 2017-07-01
 * Authors: Ismayle Santos, Erick Barros, Pedro Alcântara
 *   - Ismayle de Sousa Santos
 *   - Erick Barros dos Santos
