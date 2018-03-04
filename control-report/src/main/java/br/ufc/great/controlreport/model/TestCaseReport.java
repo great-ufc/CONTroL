@@ -1,10 +1,16 @@
+/*
+* File: TestCaseReport.java 
+* Created: 2017-07-10
+* Authors: 
+*   - Ismayle de Sousa Santos
+*   - Erick Barros dos Santos
+*   - Rossana Maria de Castro Andrade
+*   - Pedro de Alcântara dos Santos Neto
+*/
+
 package br.ufc.great.controlreport.model;
 
 import java.util.ArrayList;
-
-/**
- * Created by Erick Barros on 01/07/2017.
- */
 
 public class TestCaseReport {
     private int testId;

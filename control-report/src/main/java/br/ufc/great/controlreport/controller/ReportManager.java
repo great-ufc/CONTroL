@@ -1,4 +1,14 @@
 /*
+* File: ReportManager.java 
+* Created: 2017-07-10
+* Authors:
+*   - Ismayle de Sousa Santos
+*   - Erick Barros dos Santos
+*   - Rossana Maria de Castro Andrade
+*   - Pedro de Alcântara dos Santos Neto
+*/
+
+/*
 Description: Community License for ExtentAPI
 
 ExtentAPI and Server – Community Edition

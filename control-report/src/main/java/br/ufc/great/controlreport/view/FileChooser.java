@@ -1,11 +1,17 @@
+/*
+* File: FileChooser.java 
+* Created: 2017-07-10
+* Authors: 
+*   - Ismayle de Sousa Santos
+*   - Erick Barros dos Santos
+*   - Rossana Maria de Castro Andrade
+*   - Pedro de Alcântara dos Santos Neto
+*/
+
 package br.ufc.great.controlreport.view;
 
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
-
-/**
- * Created by Erick Barros on 01/07/2017.
- */
 
 public class FileChooser {
 	

@@ -1,3 +1,13 @@
+/*
+* File: MainWindow.java 
+* Created: 2017-07-10
+* Authors: 
+*   - Ismayle de Sousa Santos
+*   - Erick Barros dos Santos
+*   - Rossana Maria de Castro Andrade
+*   - Pedro de Alcântara dos Santos Neto
+*/
+
 package br.ufc.great.controlreport.view;
 
 import org.eclipse.swt.widgets.Display;
@@ -22,10 +32,6 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Event;
-
-/**
- * Created by Erick Barros on 01/07/2017.
- */
 
 public class MainWindow {
 
