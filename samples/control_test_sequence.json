@@ -4,8 +4,8 @@
          {
             "testId":1,
             "contextState":[
-               "battery:isBatteryMedium",
-			      "internet:hasInternetConnection"
+			      "hasInternetConnection",
+               "battery:batteryHigh"
             ],
             "expectedFeatureStatus":[
                "login",
@@ -18,25 +18,39 @@
          {
             "testId":2,
             "contextState":[
-               "isBatteryLow",
-			      "internet:hasInternetConnection"
+               "battery:batteryMeddium"
             ],
             "expectedFeatureStatus":[
-				"login"
+
             ],
             "actualFeatureStatus":[
                
             ]
-         },
+         }
+      ],
+      [
          {
             "testId":3,
             "contextState":[
-               "battery:isBatteryHigh",
-               "internet:hasInternetConnection"
+               "hasInternetConnection",
+               "battery:batteryMeddium"
             ],
             "expectedFeatureStatus":[
-              "login",
-              "video"
+               "login",
+               "video"
+            ],
+            "actualFeatureStatus":[
+            
+            ]
+         },
+         {
+            "testId":4,
+            "contextState":[
+               "battery:batteryLow", 
+               "UnknownContext"
+            ],
+            "expectedFeatureStatus":[
+               
             ],
             "actualFeatureStatus":[
                

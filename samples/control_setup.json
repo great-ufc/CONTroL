@@ -3,7 +3,7 @@
 	
 	"testReportPath":"/control/control_report.json",
 	
-	"timeoutPeriod":10,
+	"timeoutPeriod":20,
 	
 	"featuresAvaliable":["login", "video"],
 
@@ -16,9 +16,9 @@
 		},
 		"keyValuesList":{
 			"battery":{
-				"isBatteryLow":["0.0", "0.10", "0.20"],
-				"isBatteryMedium":["0.30", "0.40", "0.50", "0.60", "0.70"],
-				"isBatteryHigh":["0.80", "0.90", "1.00"]	
+				"batteryLow":["0.0", "10.0", "20.0", "30.0"],
+				"batteryMeddium":["40.0", "50.0", "60.0", "70.0"],
+				"batteryHigh":["80.0", "90.0", "100.0"]
 			}
 		}
 	}
