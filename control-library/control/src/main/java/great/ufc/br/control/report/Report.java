@@ -1,7 +1,7 @@
 /*
 * File: Report.java 
 * Created: 2017-07-01
-* Authors: Ismayle Santos, Erick Barros, Pedro Alcântara
+* Authors:
 *   - Ismayle de Sousa Santos
 *   - Erick Barros dos Santos
 *   - Rossana Maria de Castro Andrade
